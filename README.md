@@ -15,3 +15,6 @@
     style="padding-right: 10px;" 
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" 
 />
+
+## 🗂️ Funções:
+1 - arquivo pode ser salvo em Json e txt

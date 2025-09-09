@@ -17,7 +17,7 @@ agenda = {
 
 def contato_para_texto(nome_contato:str, **formas_contato):
     """Recebe um nome de contato com string e um dicionário 
-    com as formas de contato .
+    com as formas de contato.
     Retorna uma string com os dados recebidos"""
     formato_texto = f"{nome_contato}"
     for meio_contato, contato in formas_contato.items():
@@ -56,7 +56,7 @@ def altera_nome_contato(agenda_original:dict, nome_original:str, nome_atualizado
         return True
     return False
     
-#pode se usar esses códigos avbaixo para testar:   
+#pode se usar esses códigos abaixo para testar:   
 #altera_nome_contato(agenda, "Pessoa 2", "Outra pessoa 2")
 #print(agenda_para_texto(**agenda))
 
@@ -64,7 +64,7 @@ def altera_nome_contato(agenda_original:dict, nome_original:str, nome_atualizado
 def altera_forma_contato(lista_contatos:list, valor_antigo:str, novo_valor:str):
     
     """Recebe uma list lista_contatos, o valor antigo que será substituído
- e o novo valor. Caso o antigo não esteja na lista, retornará false.
+ e o novo valor. Caso o antigo não esteja na lista, retornará False.
  Caso o valor antigo esteja na lista, será removido, o novo valor será
  incluido e retornará True
  """
@@ -155,7 +155,7 @@ def usuario_inclui_contato(agenda:dict):
         
 def usuario_inclui_forma_contato(agenda:dict):
     #inclui_forma_contato(formas_contato:dict, forma_incluida:str, valor_incluido:str):
-    nome = input("Informe o nome de contato para qual deseja incluir formas de contato ")
+    nome = input("Informe o nome de contato para qual deseja incluir formas de contato: ")
     if nome in agenda.keys():
         print(f"As formas de contato suportadas pelo sistema são: {contatos_suportados}")
         forma_incluida = input("Qual a forma de contato que deseja incluir? ")
@@ -193,7 +193,7 @@ def usuario_altera_forma_contato(agenda:dict):
         forma_incluida = input("Qual a forma de contato que deseja incluir? ")
         if forma_incluida in contatos_suportados:
             print(contato_para_texto(nome, **agenda[nome]))
-            valor_antigo = input(f"Informe o {forma_incluida} que deseja alterar ")
+            valor_antigo = input(f"Informe o {forma_incluida} que deseja alterar: ")
             nova_valor = input("Informe o novo {forma_incluida} ")
             if altera_forma_contato(agenda[nome][forma_incluida], valor_antigo, nova_valor):
                 print("Contato alterado com sucesso!")
@@ -207,7 +207,7 @@ def usuario_contato_para_texto(agenda:dict):
     if nome in agenda.keys():
         print(contato_para_texto(nome, **agenda[nome]))
     else:
-        print("O contato informado não etsá na agenda.")
+        print("O contato informado não está na agenda.")
 
 def exibe_menu():
     print("\n\n")
@@ -219,7 +219,7 @@ def exibe_menu():
     print("6 - Exibir toda a agenda")
     print("7 - Excluir um contato")
     print("8 - Exportar agenda para txt")
-    print("9 - Exportar agenda para JSON")
+    print("9 - Exportar agenda para Json")
     print("10 - Importar agenda de json")
     print("11 - Sair")
     print("\n")
